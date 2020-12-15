@@ -4,7 +4,7 @@
   --background: #0a1332;
   --moon: #fdf9ce;
   --text: #fff;
-  --viewport-size: 90%;
+  --viewport-size: 85%;
 }
 
 * {
@@ -19,6 +19,7 @@ html, body {
   background-color: var(--background);
   color: var(--text);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -130,6 +131,30 @@ html, body {
   right: 0;
 
   animation: shining 4s infinite;
+}
+
+@media (min-width: 300px) {
+  .stars {
+    background-size: 55% 55%;
+  }
+}
+
+@media (min-width: 481px) {
+  .stars {
+    background-size: 50% 50%;
+  }
+}
+
+@media (min-width: 769px) {
+  .stars {
+    background-size: 40% 40%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stars {
+    background-size: 30% 30%;
+  }
 }
 
 .stars:nth-child(1) {
@@ -394,39 +419,109 @@ html, body {
 #footer {
   background-color: var(--background);
   width: 100%;
-  transform: translate(0, -30%);
+  height: calc(100% - var(--viewport-size));
   z-index: 10;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   text-align: center;
-  padding: 1rem;
+  transform: translateY(-25%);
 }
 
 #wishes {
+  width: 100%;
   font-size: 9rem;
+  line-height: 9rem;
   font-weight: 500;
   font-family: 'Italianno', 'Times New Roman', serif;
-  line-height: 9rem;
+}
+
+#credits {
+  padding: 1rem;
+  width: 100%;
+  color: white;
+  font-size: 1rem;
+}
+
+#credits a, a:active{
+  color: white;
 }
 
 @media (min-width: 300px) {
+  #footer {
+    transform: translateY(-5%);
+  }
   #wishes {
     font-size: 3rem;
     line-height: 3rem;
   }
+  #credits {
+    font-size: 0.75rem;
+  }
 }
 
 @media (min-width: 481px) {
+  #footer {
+    transform: translateY(-15%);
+  }
   #wishes {
-    font-size: 6rem;
-    line-height: 6rem;
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  #credits {
+    font-size: 0.75rem;
   }
 }
 
 @media (min-width: 769px) {
+  #footer {
+    transform: translateY(-20%);
+  }
+  #wishes {
+    font-size: 8rem;
+    line-height: 8rem;
+  }
+  #credits {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #footer {
+    transform: translateY(-25%);
+  }
   #wishes {
     font-size: 9rem;
     line-height: 9rem;
+  }
+  #credits {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #footer {
+    transform: translateY(-20%);
+  }
+  #wishes {
+    font-size: 12rem;
+    line-height: 12rem;
+  }
+  #credits {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  #footer {
+    transform: translateY(-25%);
+  }
+  #wishes {
+    font-size: 15rem;
+    line-height: 15rem;
+  }
+  #credits {
+    font-size: 1.5rem;
   }
 }
