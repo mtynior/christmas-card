@@ -14,10 +14,11 @@
 }
 
 html, body {
-  background-color: var(--background);
-  color: var(--text);
   width: 100vw;
   height: 100vh;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -34,15 +35,11 @@ html, body {
 
 @media (max-width: 300px) {
   body::before {
-    content: 'Screen is to narrow. Try to open on device with wider screen';
-    text-align: center;
-    padding: 1rem;
+    content: 'Screen is to narrow. Try to open on a device with wider screen.';
     position: absolute;
     top: 50%;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color: var(--background);
+    text-align: center;
+    padding: 1rem;
   }
 
   #card {
@@ -64,57 +61,43 @@ html, body {
 
 /* Shooting star */
 
-#comet {
+#shooting-star {
   position: absolute;
-  height: 2px;
+  height: 0.75%;
   width: 0%;
   background-image: linear-gradient(to right, white, #fff0);
-  top: -2px;
-  left: 100%;
+  top: 10%;
+  left: 80%;
   z-index: 2;
-  transform: skewY(-10deg);
-  animation: falling-star 60s infinite;
+  transform: skewY(-8deg);
+  transform-origin: center right;
+  animation: shooting-star 12s infinite ease-in-out;
 }
 
-@keyframes falling-star {
+@keyframes shooting-star {
   0% {
     width: 0%;
     opacity: 0;
-    top: -2px;
+    top: 15%;
     left: 100%;
   }
-  40% {
-    width: 0%;
-    opacity: 0;
-    top: -2px;
-    left: 100%;
-  }
-  41% {
-    width: 0%;
-    height: 1px;
-    opacity: 0.25;
-  }
-  42% {
+  45% {
     width: 15%;
-    height: 2px;
     opacity: 1;
+    top: 15%;
+    left: 100%;
   }
-  43% {
-    width: 0%;
-    height: 1px;
-    opacity: 0.25;
-  }
-  44% {
-    width: 0%;
-    opacity: 0;
-    top: 50%;
-    left: 0%;
+  60% {
+    width: 15%;
+    opacity: 1;
+    top: 35%;
+    left: -15%;
   }
   100% {
     width: 0%;
     opacity: 0;
-    top: 60%;
-    left: 0%;
+    top: 35%;
+    left: -15%;
   }
 }
 
@@ -132,11 +115,12 @@ html, body {
 
 .stars {
   background-image: 
-    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
-    radial-gradient(3px 3px at 40px 70px, #fff, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+    radial-gradient(2px 2px at 10% 10%, #eee, rgba(0,0,0,0)),
+    radial-gradient(3px 3px at 35% 45%, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 54% 63%, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 77% 80%, #ddd, rgba(0,0,0,0));
   background-repeat: repeat;
-  background-size: 200px 200px;
+  background-size: 30% 30%;
   opacity: 0.5;
   overflow: hidden;
   position: absolute;
@@ -149,7 +133,7 @@ html, body {
 }
 
 .stars:nth-child(1) {
-  background-position: 50% 50%;
+  background-position: 53% 48%;
   animation-delay: 0s;
 }
 .stars:nth-child(2) {
@@ -157,11 +141,11 @@ html, body {
   animation-delay: 2s;
 }
 .stars:nth-child(3) {
-  background-position: -20% -30%;
+  background-position: -20% -32%;
   animation-delay: 1s;
 }
 .stars:nth-child(4) {
-  background-position: 40% -80%;
+  background-position: 40% -70%;
   animation-delay: 4s;
 }
 .stars:nth-child(5) {
@@ -316,62 +300,85 @@ html, body {
 /* Harts */
 
 #harts-suzi {
-  bottom: 17%;
-  left: 26%;
+  bottom: 15%;
+  left: 27%;
 }
 
 #harts-izzy {
-  bottom: 17%;
-  left: 60%;
+  bottom: 15%;
+  left: 63%;
 }
 
 .harts {
   position: absolute;
-  width: 50px;
-  height: 100px;
+  width: 3%;
+  height: 8%;
   z-index: 100;
 }
 
 .hart {
-  width: 10px;
-  height: 10px;
+  width: 30%;
+  height: 30%;
+  opacity: 0;
   background-color: red;
   position: absolute;
-  opacity: 0;
-  animation: hart-blink 5s ease-in-out infinite;
   -webkit-mask-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>');
   mask-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>');
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  animation: move 10s infinite cubic-bezier(0.5, 0.5, 0.5, 0.5);
 }
 
-.hart:nth-child(1) {
-  top: 0;
-  right: 20%;
-  animation-delay: 2.25s;
+.hart:nth-child(1) {  
+  animation-delay: 1s;
 }
 
 .hart:nth-child(2) {
-  top: 20%;
-  left: 20%;
-  animation-delay: 1.75s;
+  animation-delay: 2.5s;
 }
 
 .hart:nth-child(3) {
-  top: 40%;
-  right: 30%;
-  animation-delay: 1.25s;
+  animation-delay: 3.5s;
 }
 
 .hart:nth-child(4) {
-  top: 60%;
-  left: 10%;
-  animation-delay: 0.75s;
+  animation-delay: 4.5s;
 }
-.hart:nth-child(5) {
-  top: 80%;
-  left: 40%;
-  animation-delay: 0s;
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    bottom: 00%;
+    left: 0%;
+  }
+  10% {
+    opacity: 1;
+    bottom: 20%;
+    left: 100%;
+  }
+  20% {
+    bottom: 40%;
+    left: 10%;
+  }
+  30% {
+    bottom: 60%;
+    left: 75%;
+  }
+  40% {
+    opacity: 1;
+    bottom: 80%;
+    left: 5%;
+  }
+  50% {
+    opacity: 0;
+    bottom: 100%;
+    left: 90%;
+  }
+  100% {
+    opacity: 0;
+    bottom: 100%;
+    left: 90%;
+  }
 }
 
 @keyframes hart-blink {
