@@ -431,17 +431,16 @@ html, body {
 
 #wishes {
   width: 100%;
-  font-size: 9rem;
-  line-height: 9rem;
+  font-size: 15vmin;
+  font-size: 15vmin;
   font-weight: 500;
   font-family: 'Italianno', 'Times New Roman', serif;
 }
 
 #credits {
-  padding: 1rem;
   width: 100%;
   color: white;
-  font-size: 1rem;
+  font-size: 1.25vmin;
 }
 
 #credits a, a:active{
@@ -449,79 +448,37 @@ html, body {
 }
 
 @media (min-width: 300px) {
-  #footer {
-    transform: translateY(-5%);
-  }
-  #wishes {
-    font-size: 3rem;
-    line-height: 3rem;
-  }
   #credits {
-    font-size: 0.75rem;
+    font-size: 2vmin;
   }
 }
 
 @media (min-width: 481px) {
-  #footer {
-    transform: translateY(-15%);
-  }
-  #wishes {
-    font-size: 5rem;
-    line-height: 5rem;
-  }
   #credits {
-    font-size: 0.75rem;
+    font-size: 1.75vmin;
   }
 }
 
 @media (min-width: 769px) {
-  #footer {
-    transform: translateY(-20%);
-  }
-  #wishes {
-    font-size: 8rem;
-    line-height: 8rem;
-  }
   #credits {
-    font-size: 1rem;
+    font-size: 1.5vmin;
   }
 }
 
 @media (min-width: 1024px) {
-  #footer {
-    transform: translateY(-25%);
-  }
-  #wishes {
-    font-size: 9rem;
-    line-height: 9rem;
-  }
   #credits {
-    font-size: 1rem;
+    font-size: 1.25vmin;
   }
 }
 
 @media (min-width: 1200px) {
-  #footer {
-    transform: translateY(-20%);
-  }
-  #wishes {
-    font-size: 12rem;
-    line-height: 12rem;
-  }
   #credits {
-    font-size: 1rem;
+    font-size: 1.25vmin;
   }
 }
 
 @media (min-width: 2000px) {
-  #footer {
-    transform: translateY(-25%);
-  }
-  #wishes {
-    font-size: 15rem;
-    line-height: 15rem;
-  }
   #credits {
-    font-size: 1.5rem;
+    font-size: 1.5vmin;
   }
 }
