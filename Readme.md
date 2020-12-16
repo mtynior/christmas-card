@@ -20,9 +20,9 @@
 ### Browser support
 
 - Chrome,
-- Firefox
-- Safari cycle,
-- Edge
+- Firefox,
+- Safari,
+- Edge (WebKit),
 
 ### License
 
