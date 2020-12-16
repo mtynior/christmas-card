@@ -26,4 +26,4 @@
 
 ### License
 
-Tatooine is released under the MIT license. See LICENSE for details.
+This project is released under the MIT license.
