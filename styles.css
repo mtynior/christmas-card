@@ -325,13 +325,13 @@ html, body {
 /* Harts */
 
 #harts-suzi {
-  bottom: 15%;
-  left: 27%;
+  bottom: 14%;
+  left: 26%;
 }
 
 #harts-izzy {
   bottom: 15%;
-  left: 63%;
+  left: 61%;
 }
 
 .harts {
@@ -387,7 +387,7 @@ html, body {
   }
   30% {
     bottom: 60%;
-    left: 75%;
+    left: 50%;
   }
   40% {
     opacity: 1;
