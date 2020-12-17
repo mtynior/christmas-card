@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://xmas.tynior.com" target="_blank">
-    <img src="https://user-images.githubusercontent.com/6362174/102325375-5be60900-3f83-11eb-8e94-71d362bcb835.png" width="900px">
+    <img src="assets/thumbnail.png" width="900px">
     <br>
     Live Site
   </a>
